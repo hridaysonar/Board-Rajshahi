@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Assignmment-5</title>
+  <title>Assignment-5</title>
 </head>
 
-<body id="changeBackground" class="bg-slate-50 ">
+<body id="changeBackground" class="bg-slate-50">
   <header>
     <nav>
-      <div class="navbar bg-base-200 mt-6 w-[95%]  m-[auto] rounded-lg">
-
+      <div class="navbar bg-base-200 mt-6 w-[95%] m-[auto] rounded-lg">
         <div class="flex-1">
           <img class="h-8" src="./assets/logo.png" alt="">
           <a class="btn btn-ghost text-xl">Dev<span class="text-3xl">Board</span></a>
@@ -23,10 +22,9 @@
             <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
               <div class="indicator">
                 <img src="./assets/checkbox.png" alt="">
-                <span class="badge badge-sm indicator-item">23</span>
+                <span class="badge badge-sm indicator-item" id="statusindicator">23</span>
               </div>
             </div>
-
           </div>
         </div>
         <div class="dropdown dropdown-end">
@@ -37,181 +35,60 @@
           </div>
         </div>
       </div>
-      </div>
     </nav>
   </header>
 
-  <main class="flex gap-5 justify-center  p-5">
-    <!-- col 1 -->
+  <main class="flex gap-5 justify-center p-5">
+    <!-- Left Column -->
     <section class="w-[70%]">
-      <!-- row 1 -->
-        <div class="flex items-center gap-5">
-          <!-- card 1 -->
-          <div class="w-[25%] ">
-            <div class="bg-slate-300 h-24  rounded-2xl p-8 flex gap-4">
-              <img class="bg-white p-2 rounded-3xl" src="./assets/checkbox.png" alt="">
-              <div>
-                <p>Task Assigned </p>
-                <h1 class="font-bold text-xl">6</h1>
-              </div>
-            </div>
-          </div>
-          <!-- card 2 -->
-          <div class="w-[50%]">
-            <div id="back-now"
-              class="bg-gradient-to-r from-cyan-500 to-blue-500 h-24 rounded-2xl p-8 flex gap-4 cursor-pointer">
-              <img class=" w-12 h-12 " src="./assets/board.png" alt="">
-              <div>
-                <p class="text-white">Discover Something <br> New Today!</p>
-
-              </div>
-            </div>
-          </div>
-          <!-- card 3 -->
-          <div class="w-[25%]">
-            <div class="bg-slate-300 h-24 rounded-2xl p-8 flex gap-4 ">
-              <img class="bg-white p-2 rounded-3xl" src="./assets/calender.png" alt="">
-              <div>
-                <p id="new-date"> </p>
-
-              </div>
+      <div class="flex items-center gap-5">
+        <div class="w-[25%]">
+          <div class="bg-slate-300 h-24 rounded-2xl p-8 flex gap-4">
+            <img class="bg-white p-2 rounded-3xl" src="./assets/checkbox.png" alt="">
+            <div>
+              <p>Task Assigned</p>
+              <h1 class="font-bold text-xl" id="taskAssigned">6</h1>
             </div>
           </div>
         </div>
-      
-      <!-- row 2 -->
-      <div class="mt-5">
-        <div class="grid grid-cols-3   gap-5 m-auto">
-          <!-- card 1 -->
-          <div class="card bg-slate-200 text-neutral-content w-[100%] h-[330px]">
-            <div class="card-body  ">
-              <h2 class=" bg-slate-100 w-24 card-title text-black rounded-md">ShopEase</h2>
-              <h1 class="text-black text-2xl	">Fix Mobile Button Issue </h1>
-              <p class="bg-slate-100 p-5 rounded-md border-b border-dashed text-gray-400">Debug using Chrome DevTools,
-                check for overlappin</p>
-              <div class="card-actions justify-between mt-1">
-                <span class="text-black">Deadline <br>
-                  <h2 class="text-black">21 March 2025</h2>
-                </span>
-
-                <button class="btn btn-primary">Completed</button>
-
-              </div>
-            </div>
-
-          </div>
-          <!-- card 2 -->
-          <div class="card bg-slate-200 text-neutral-content w-[100%] h-[330px]">
-            <div class="card-body  ">
-              <h2 class=" bg-slate-100 w-24 card-title text-black rounded-md">CloudSync</h2>
-              <h1 class="text-black text-2xl	">Add Dark Mode</h1>
-              <p class="bg-slate-100 p-5 rounded-md border-b border-dashed text-gray-400">Store the user's preference in
-                localStorage, update CSS varia</p>
-              <div class="card-actions justify-between mt-1">
-                <span class="text-black">Deadline <br>
-                  <h2 class="text-black">21 March 2025</h2>
-                </span>
-
-                <button class="btn btn-primary">Completed</button>
-
-              </div>
+        <div class="w-[50%]">
+          <div id="back-now"
+            class="bg-gradient-to-r from-cyan-500 to-blue-500 h-24 rounded-2xl p-8 flex gap-4 cursor-pointer">
+            <img class=" w-12 h-12 " src="./assets/board.png" alt="">
+            <div>
+              <p class="text-white">Discover Something <br> New Today!</p>
             </div>
           </div>
-          <!-- card 3 -->
-          <div class="card bg-slate-200 text-neutral-content w-[100%] h-[330px]">
-            <div class="card-body  ">
-              <h2 class=" bg-slate-100 w-24 card-title text-black rounded-md">SwiftPay</h2>
-              <h1 class="text-black text-2xl	">Optimize Home page </h1>
-              <p class="bg-slate-100 p-5 rounded-md border-b border-dashed text-gray-400">Debug using Chrome DevTools,
-                check for overlappin</p>
-              <div class="card-actions justify-between mt-1">
-                <span class="text-black">Deadline <br>
-                  <h2 class="text-black">21 March 2025</h2>
-                </span>
-
-                <button class="btn btn-primary">Completed</button>
-
-
-              </div>
-            </div>
-          </div>
-          <!-- card 4 -->
-          <div class="card bg-slate-200 text-neutral-content w-[100%] h-[330px]">
-            <div class="card-body  ">
-              <h2 class=" bg-slate-100 w-24 card-title text-black rounded-md">Meta</h2>
-              <h1 class="text-black text-2xl	">Add new emoji 🤲</h1>
-              <p class="bg-slate-100 p-5 rounded-md border-b border-dashed text-gray-400">Debug using Chrome DevTools,
-                check for overlappin</p>
-              <div class="card-actions justify-between mt-1">
-                <span class="text-black">Deadline <br>
-                  <h2 class="text-black">21 March 2025</h2>
-                </span>
-
-                <button class="btn btn-primary">Completed</button>
-
-              </div>
-            </div>
-          </div>
-          <!-- card 5 -->
-          <div class="card bg-slate-200 text-neutral-content w-[100%] h-[330px]">
-            <div class="card-body  ">
-              <h2 class=" bg-slate-100 w-24 card-title text-black rounded-md">Google LLC</h2>
-              <h1 class="text-black text-2xl	">Integrate OpenAI API </h1>
-              <p class="bg-slate-100 p-5 rounded-md border-b border-dashed text-gray-400">Debug using Chrome DevTools,
-                check for overlappin</p>
-              <div class="card-actions justify-between mt-1">
-                <span class="text-black">Deadline <br>
-                  <h2 class="text-black">21 March 2025</h2>
-                </span>
-
-                <button class="btn btn-primary">Completed</button>
-
-              </div>
-            </div>
-          </div>
-          <!-- card 6 -->
-          <div class="card bg-slate-200 text-neutral-content w-[100%] h-[330px]">
-            <div class="card-body  ">
-              <h2 class=" bg-slate-100 w-24 card-title text-black rounded-md">Glassdoar</h2>
-              <h1 class="text-black text-2xl	">Improve Job searching </h1>
-              <p class="bg-slate-100 p-5 rounded-md border-b border-dashed text-gray-400">Debug using Chrome DevTools,
-                check for overlappin</p>
-              <div class="card-actions justify-between mt-1">
-                <span class="text-black">Deadline <br>
-                  <h2 class="text-black">21 March 2025</h2>
-                </span>
-
-                <button class="btn btn-primary">Completed</button>
-
-              </div>
+        </div>
+        <!-- card 3 -->
+        <div class="w-[25%]">
+          <div class="bg-slate-300 h-24 rounded-2xl p-8 flex gap-4 ">
+            <img class="bg-white p-2 rounded-3xl" src="./assets/calender.png" alt="">
+            <div>
+              <p id="new-date"> </p>
             </div>
           </div>
         </div>
       </div>
+      </div>
+      <div id="taskCardsContainer" class="grid grid-cols-3 gap-5 mt-5">
+      </div>
     </section>
-    <!-- col 2 -->
+
+    <!-- Right Column -->
     <section class="w-[30%]">
-      <div class="bg-slate-300  p-12 rounded-md   h-[100%] w-[100%]">
+      <div class="bg-slate-300 p-12 rounded-md h-full">
         <div class="flex gap-2">
           <img src="./assets/activity.png" alt="">
-          <h1>Activity log</h1>
+          <h1>Activity Log</h1>
         </div>
         <div class="mt-5">
-          <button class="btn btn-active btn-success">Clear History</button>
+          <button class="btn btn-active btn-success" id="clearHistory">Clear History</button>
         </div>
+        <p id="history" class="text-4xl text-blue-500 mt-5"></p>
       </div>
     </section>
-
-   
-
-
-
   </main>
-
-
-
-
   <script src="appliciton.js"></script>
 </body>
-
 </html>
