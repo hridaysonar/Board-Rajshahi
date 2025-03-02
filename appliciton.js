@@ -6,16 +6,16 @@
 
 
 
-// document.getElementById("back-now").addEventListener("click", function () {
-//     window.location.href = "back.html";
-//   });
+document.getElementById("back-now").addEventListener("click", function () {
+    window.location.href = "back.html";
+  });
 
 // //   colorjavasript
-//   document.getElementById('thimeChange').addEventListener('click', function() {
-//     const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A6', '#A633FF','#FFA07A','#800080'];
-//     const randomColor = colors[Math.floor(Math.random() * colors.length)];
-//     document.body.style.backgroundColor = randomColor;
-// });
+  document.getElementById('thimeChange').addEventListener('click', function() {
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A6', '#A633FF','#FFA07A','#800080'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+});
 
  
 // // date
@@ -121,8 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
         statusBtn.disabled = true;
         task.status = "Completed";
         statusBtn.textContent = task.status;
-        
-        // Decrease the Task Assigned count
         taskAssignedCount--;
         document.getElementById("taskAssigned").textContent = taskAssignedCount;
 
